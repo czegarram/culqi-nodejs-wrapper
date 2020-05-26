@@ -51,14 +51,6 @@ class Culqi {
 	createToken(params) {
 		const url = this.baseUrl + paths.createToken;
 		const fields = [
-			'first_name',
-			'last_name',
-			'email',
-			'currency',
-			'card_number',
-			'cvv',
-			'expiration_month',
-			'expiration_year'
 		];
 		const newHeader = Object.assign({}, this.headers, {
 			Authorization: 'Bearer ' + this.codeCommerce
@@ -70,20 +62,6 @@ class Culqi {
 	createCharge (params){
 		const url = this.baseUrl + paths.createCharge;
 		const fields = [
-			'token_id',
-			'order_id',
-			'first_name',
-			'last_name',
-			'email',
-			'address',
-			'address_city',
-			'phone_number',
-			'country_code',
-			'currency_code',
-			'amount',
-			'installments',
-			'product_description',
-			'cvv'
 		];
 
 		return createPromise(url, 'POST', this.headers, params, fields);
@@ -101,14 +79,6 @@ class Culqi {
 	createRefund(params){
 		var url = this.baseUrl + paths.createPlan;
 		var fields = [
-			'alias',
-			'name',
-			'amount',
-			'currency_code',
-			'interval',
-			'interval_count',
-			'trial_days',
-			'limit'
 		];
 
 		return createPromise(url, 'POST', this.headers, params, fields);
@@ -117,14 +87,6 @@ class Culqi {
 	createPlan(params){
 		var url = this.baseUrl + paths.createPlan;
 		var fields = [
-			'alias',
-			'name',
-			'amount',
-			'currency_code',
-			'interval',
-			'interval_count',
-			'trial_days',
-			'limit'
 		];
 
 		return createPromise(url, 'POST', this.headers, params, fields);
@@ -133,15 +95,6 @@ class Culqi {
 	createSuscription(params){
 		var url = this.baseUrl + paths.createSuscription;
 		var fields = [
-			'plan_alias',
-			'token_id',
-			'first_name',
-			'last_name',
-			'email',
-			'address',
-			'address_city',
-			'country_code',
-			'phone_number'
 		];
 
 		return createPromise(url, 'POST', this.headers, params, fields);
